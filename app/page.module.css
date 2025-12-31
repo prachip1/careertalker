@@ -1,0 +1,521 @@
+.signInContainer {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: 'Manrope', sans-serif;
+}
+
+.backgroundAnimation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.stars,
+.stars2,
+.stars3,
+.dust1,
+.dust2,
+.dust3,
+.dust4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.stars {
+  background-image: 
+    radial-gradient(2px 2px at 20% 30%, #fff, transparent),
+    radial-gradient(2px 2px at 60% 70%, #fff, transparent),
+    radial-gradient(1px 1px at 50% 50%, #fff, transparent),
+    radial-gradient(1px 1px at 80% 10%, #fff, transparent),
+    radial-gradient(2px 2px at 90% 40%, #fff, transparent),
+    radial-gradient(1px 1px at 33% 60%, #fff, transparent),
+    radial-gradient(1px 1px at 55% 80%, #fff, transparent),
+    radial-gradient(1px 1px at 12% 25%, #fff, transparent),
+    radial-gradient(1px 1px at 88% 65%, #fff, transparent),
+    radial-gradient(1px 1px at 45% 15%, #fff, transparent);
+  background-repeat: repeat;
+  background-size: 200% 200%;
+  animation: sparkle 20s linear infinite;
+  opacity: 0.8;
+}
+
+.stars2 {
+  background-image: 
+    radial-gradient(1px 1px at 25% 25%, #fff, transparent),
+    radial-gradient(1px 1px at 75% 75%, #fff, transparent),
+    radial-gradient(1px 1px at 40% 60%, #fff, transparent),
+    radial-gradient(1px 1px at 18% 72%, #fff, transparent),
+    radial-gradient(1px 1px at 82% 28%, #fff, transparent);
+  background-repeat: repeat;
+  background-size: 300% 300%;
+  animation: sparkle 15s linear infinite reverse;
+  opacity: 0.6;
+}
+
+.stars3 {
+  background-image: 
+    radial-gradient(1px 1px at 15% 45%, #fff, transparent),
+    radial-gradient(1px 1px at 85% 55%, #fff, transparent),
+    radial-gradient(1px 1px at 35% 75%, #fff, transparent),
+    radial-gradient(1px 1px at 65% 25%, #fff, transparent);
+  background-repeat: repeat;
+  background-size: 400% 400%;
+  animation: sparkle 25s linear infinite;
+  opacity: 0.4;
+}
+
+/* Dust particles - very small */
+.dust1 {
+  background-image: 
+    radial-gradient(0.5px 0.5px at 10% 20%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(0.5px 0.5px at 30% 40%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(0.5px 0.5px at 50% 60%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(0.5px 0.5px at 70% 30%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(0.5px 0.5px at 90% 80%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(0.5px 0.5px at 15% 70%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(0.5px 0.5px at 85% 15%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(0.5px 0.5px at 25% 85%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(0.5px 0.5px at 75% 50%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(0.5px 0.5px at 40% 10%, rgba(255, 255, 255, 0.5), transparent);
+  background-repeat: repeat;
+  background-size: 250% 250%;
+  animation: dustDrift1 40s linear infinite;
+  opacity: 0.3;
+}
+
+.dust2 {
+  background-image: 
+    radial-gradient(0.5px 0.5px at 5% 15%, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(0.5px 0.5px at 35% 55%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(0.5px 0.5px at 65% 25%, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(0.5px 0.5px at 95% 65%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(0.5px 0.5px at 20% 90%, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(0.5px 0.5px at 80% 40%, rgba(255, 255, 255, 0.5), transparent);
+  background-repeat: repeat;
+  background-size: 350% 350%;
+  animation: dustDrift2 50s linear infinite reverse;
+  opacity: 0.25;
+}
+
+.dust3 {
+  background-image: 
+    radial-gradient(0.5px 0.5px at 8% 35%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(0.5px 0.5px at 42% 75%, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(0.5px 0.5px at 78% 20%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(0.5px 0.5px at 22% 60%, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(0.5px 0.5px at 58% 85%, rgba(255, 255, 255, 0.5), transparent);
+  background-repeat: repeat;
+  background-size: 450% 450%;
+  animation: dustDrift3 60s linear infinite;
+  opacity: 0.2;
+}
+
+.dust4 {
+  background-image: 
+    radial-gradient(0.5px 0.5px at 12% 45%, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(0.5px 0.5px at 48% 15%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(0.5px 0.5px at 88% 75%, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(0.5px 0.5px at 28% 80%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(0.5px 0.5px at 72% 30%, rgba(255, 255, 255, 0.4), transparent);
+  background-repeat: repeat;
+  background-size: 500% 500%;
+  animation: dustDrift4 45s linear infinite reverse;
+  opacity: 0.2;
+}
+
+@keyframes sparkle {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-200%);
+  }
+}
+
+@keyframes dustDrift1 {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-100px, 100px);
+  }
+}
+
+@keyframes dustDrift2 {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(120px, -80px);
+  }
+}
+
+@keyframes dustDrift3 {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-80px, -120px);
+  }
+}
+
+@keyframes dustDrift4 {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(150px, 90px);
+  }
+}
+
+.comet {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+  animation: comet 15s linear infinite;
+}
+
+/* Planet-like dust clouds - very subtle */
+.planet1,
+.planet2,
+.planet3 {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.02) 0%, transparent 70%);
+  filter: blur(30px);
+  opacity: 0.3;
+}
+
+.planet1 {
+  width: 200px;
+  height: 200px;
+  top: 20%;
+  left: 10%;
+  animation: planetMove1 80s ease-in-out infinite;
+}
+
+.planet2 {
+  width: 150px;
+  height: 150px;
+  top: 60%;
+  right: 15%;
+  animation: planetMove2 100s ease-in-out infinite;
+}
+
+.planet3 {
+  width: 180px;
+  height: 180px;
+  bottom: 20%;
+  left: 30%;
+  animation: planetMove3 120s ease-in-out infinite;
+}
+
+@keyframes planetMove1 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(50px, 30px) scale(1.1);
+  }
+  66% {
+    transform: translate(-30px, 50px) scale(0.9);
+  }
+}
+
+@keyframes planetMove2 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-40px, -60px) scale(1.15);
+  }
+}
+
+@keyframes planetMove3 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(60px, -40px) scale(1.2);
+  }
+  75% {
+    transform: translate(-50px, 40px) scale(0.85);
+  }
+}
+
+@keyframes comet {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-300px, 300px);
+    opacity: 0;
+  }
+}
+
+.signInContent {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 450px;
+  padding: 2rem;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logoContainer {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  animation: logoFloat 3s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(5deg);
+  }
+}
+
+.logo::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: borderGlow 3s ease-in-out infinite;
+}
+
+@keyframes borderGlow {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.logoText {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ffffff;
+  font-family: 'Manrope', sans-serif;
+  letter-spacing: -1px;
+}
+
+.brandName {
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  letter-spacing: -0.5px;
+}
+
+.signInCard {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  animation: cardSlide 0.6s ease-out 0.2s both;
+}
+
+@keyframes cardSlide {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.signInTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0 0 0.5rem 0;
+  font-family: 'Manrope', sans-serif;
+}
+
+.signInSubtitle {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 2rem 0;
+  font-family: 'Manrope', sans-serif;
+}
+
+.signInForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.inputGroup {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 1.25rem;
+  color: rgba(255, 255, 255, 0.5);
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.input {
+  width: 100%;
+  padding: 1.25rem 1.25rem 1.25rem 3.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1rem;
+  font-family: 'Manrope', sans-serif;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.input:focus {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+.input:focus + .inputIcon,
+.input:focus ~ .inputIcon {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.signInButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1.25rem 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  color: #000000;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Manrope', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.signInButton::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.1);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.signInButton:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.signInButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
+}
+
+.signInButton:active {
+  transform: translateY(0);
+}
+
+.signInButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.loadingSpinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-top-color: #000000;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
