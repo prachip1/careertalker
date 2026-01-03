@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
 import styles from './page.module.css'
 
 export default function SignIn() {
@@ -38,7 +39,13 @@ export default function SignIn() {
       <div className={styles.signInContent}>
         <div className={styles.logoContainer}>
           <div className={styles.logo}>
-            <span className={styles.logoText}>CT</span>
+            <Image 
+              src="/career.png" 
+              alt="CareerTalker Logo" 
+              width={80} 
+              height={80}
+              className={styles.logoImage}
+            />
           </div>
           <h1 className={styles.brandName}>CareerTalker</h1>
         </div>

@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import styles from './page.module.css'
 
 export default function Talker() {
@@ -358,7 +359,13 @@ export default function Talker() {
         <div className={styles.sidebarHeader}>
           <Link href="/" className={styles.logoLink}>
             <div className={styles.logo}>
-              <span className={styles.logoText}>CT</span>
+              <Image 
+                src="/career.png" 
+                alt="CareerTalker Logo" 
+                width={48} 
+                height={48}
+                className={styles.logoImage}
+              />
             </div>
             <span className={styles.brandName}>CareerTalker</span>
           </Link>

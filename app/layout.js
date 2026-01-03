@@ -1,6 +1,11 @@
 export const metadata = {
   title: 'CareerTalker - AI Career Counselor',
   description: 'Voice-based AI career counseling',
+  icons: {
+    icon: '/career.png',
+    shortcut: '/career.png',
+    apple: '/career.png',
+  },
 }
 
 export default function RootLayout({ children }) {

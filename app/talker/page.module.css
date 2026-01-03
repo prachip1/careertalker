@@ -410,6 +410,13 @@
   letter-spacing: -0.5px;
 }
 
+.logoImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 4px;
+}
+
 .brandName {
   font-size: 1.25rem;
   font-weight: 700;
